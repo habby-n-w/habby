@@ -6,7 +6,7 @@ import { auth } from '@clerk/nextjs/server'
 export default function Home() {
   const { userId }: { userId: string | null } = auth()
   return (
-    <main className="flex min-h-[calc(100vh-80px)] flex-col items-center justify-center gap-6 ">
+    <main className="flex min-h-[calc(100vh-10px)] flex-col items-center justify-center gap-6 ">
       <Image src="/intro.png" height={200} width={200} alt="Home" />
       <div className="text-xl font-semibold text-center flex items-center justify-center">
         Building habits just made easy <br /> with HABBY

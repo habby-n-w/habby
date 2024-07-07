@@ -30,4 +30,95 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}/* globals.css *//* globals.css */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container select {
+  padding: 10px;
+  font-size: 1rem;
+  color: black; /* Change the font color to black */
+}
+
+.input-container button {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.todo-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.start-button {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.timer-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.timer-screen h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.timer-screen .timer {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.timer-screen button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }

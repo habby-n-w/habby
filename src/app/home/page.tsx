@@ -1,3 +1,4 @@
+import CompleteTask from "../_components/completeTask";
 import Footer from "../_components/footer";
 import Timer from "../_components/Timer";
 import TodoList from "../_components/TodoList";

@@ -2,6 +2,7 @@
 import { useTodoStore } from '@/store/todoStore'
 import { BadgeCheck, Ban, Check } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import CompleteTask from './completeTask'
 
 const TodoList = () => {
   const { todos, toggleTodo } = useTodoStore()
@@ -45,7 +46,9 @@ const TodoList = () => {
 
   return (
     <div className="flex flex-col gap-3 items-center justify-center max-w-[1000px] w-full p-5 ">
-     {!selectedTodo && (  <div className="text-2xl font-bold  text-left md:text-center w-full">
+     {!selectedTodo && <CompleteTask/>}         
+
+     {!selectedTodo && (  <div className="text-2xl font-bold  text-left md:text-center w-full mt-4">
         Todos
       </div>    )}
       {!selectedTodo && (

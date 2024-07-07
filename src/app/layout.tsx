@@ -6,6 +6,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import "./globals.css";
+import Navbar from "./_components/navbar";
 export default function RootLayout({
   children,
 }: {
@@ -15,6 +16,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
+          <Navbar/>
           {/* <SignedOut>
             <SignInButton />
           </SignedOut>

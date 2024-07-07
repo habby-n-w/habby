@@ -19,7 +19,6 @@ const TodoInput = () => {
   const [duration, setDuration] = useState('')
   const handleAddTodo = () => {
     const newTodo = {
-      id: String(Date.now()),
       title: title,
       duration: Number(duration),
       completed: false,

@@ -25,8 +25,10 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useMediaQuery } from 'react-responsive'
+import TodoInput from './TodoInput'
+import { useDialogControlStore } from '@/store/dialogControlStore'
 export function DrawerDialogDemo() {
-  const [open, setOpen] = React.useState(false)
+  const {open, setOpen} = useDialogControlStore()
   const isDesktop = useMediaQuery({
     query: '(min-width: 768px)',
   })
@@ -72,7 +74,7 @@ export function DrawerDialogDemo() {
   )
 }
 const Footer = () => {
-  const [open, setOpen] = React.useState(false)
+  const {open, setOpen} = useDialogControlStore()
   const isDesktop = useMediaQuery({
     query: '(min-width: 768px)',
   })
@@ -88,12 +90,7 @@ const Footer = () => {
             </div>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle>Edit profile</DialogTitle>
-              <DialogDescription>
-                Make changes to your profile here. Click save when youre done.
-              </DialogDescription>
-            </DialogHeader>
+          <TodoInput/>
           </DialogContent>
         </Dialog>
       </div>
@@ -109,19 +106,11 @@ const Footer = () => {
             </div>
           </div>
         </DrawerTrigger>
-        <DrawerContent className='h-[800px]'>
-          <DrawerHeader className="text-left">
-            <DrawerTitle>Edit profile</DrawerTitle>
-            <DrawerDescription>
-              Make changes to your profile here. Click save when youre done.
-            </DrawerDescription>
-          </DrawerHeader>
+        <DrawerContent className='  flex items-center justify-center'>
+          <div className='p-4 w-full'>
+          <TodoInput/>
 
-          <DrawerFooter className="pt-2">
-            <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
-            </DrawerClose>
-          </DrawerFooter>
+          </div>
         </DrawerContent>
       </Drawer>
     </div>

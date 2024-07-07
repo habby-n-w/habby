@@ -28,7 +28,6 @@ const TodoInput = () => {
     addTodo(newTodo)
     setOpen(false)
   }
-  console.log(todos, open)
   return (
     <div className="flex flex-col items-center justify-center w-full gap-9">
       <div className="text-2xl font-semibold">Add Task</div>

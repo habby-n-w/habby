@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
 
 interface Props {
-  max: number;
+  max?: number;
   value: number;
-  min: number;
+  min?: number;
   gaugePrimaryColor: string;
   gaugeSecondaryColor: string;
   className?: string;

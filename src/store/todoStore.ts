@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-interface Todo {
+export interface Todo {
   id: string;
   title: string;
   duration: number;
@@ -10,7 +10,7 @@ interface Todo {
 
 interface TodoStore {
   todos: Todo[];
-  addTodo: (todo: Omit<Todo, 'id'>) => void; // Omit 'id' from Todo for adding new todos
+  addTodo: (todo: Omit<Todo, 'id'>) => void;
   toggleTodo: (id: string) => void;
   removeTodo: (id: string) => void;
 }

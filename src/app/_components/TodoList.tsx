@@ -1,16 +1,16 @@
 'use client'
-import { useTodoStore } from '@/store/todoStore'
+import { Todo, useTodoStore } from '@/store/todoStore'
 import { BadgeCheck, Ban, Check } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import CompleteTask from './completeTask'
 
 const TodoList = () => {
   const { todos, toggleTodo } = useTodoStore()
-  const [selectedTodo, setSelectedTodo] = useState(null)
+  const [selectedTodo, setSelectedTodo] = useState<Todo | any>(undefined)
   const [timer, setTimer] = useState(0)
 
   // Function to start timer for selected todo
-  const startTimer = (todo: any) => {
+  const startTimer = (todo: Todo) => {
     setSelectedTodo(todo)
     setTimer(todo.duration * 60) // Convert duration to seconds
     toggleTodo(todo.id) // Mark todo as started
@@ -18,7 +18,7 @@ const TodoList = () => {
 
   // Function to stop timer
   const stopTimer = () => {
-    setSelectedTodo(null)
+    setSelectedTodo(undefined)
     setTimer(0)
   }
   const formatTimer = (timeInSeconds:any) => {
